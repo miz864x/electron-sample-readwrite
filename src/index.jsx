@@ -20,7 +20,7 @@ class App extends React.Component {
       if (!exists) return
       fs.readFile(this.state.filePath, (err, data) => {
         if (err) throw err
-        this.setState({ fileText: JSON.parse(data.fileText) })
+        this.setState({ fileText: JSON.parse(data).fileText })
       })
     })
   }
